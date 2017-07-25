@@ -11,9 +11,9 @@ npm install --save has-gradient
 ## Usage
 
 ```javascript
-var hasGradient = require('has-gradient')
+const hasGradient = require('has-gradient')
 
-hasGradient()  // => true
+hasGradient('linear-gradient(tomato, lime)')  // => true
 ```
 
 ## License
