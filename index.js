@@ -1,7 +1,13 @@
 'use strict'
 
-module.exports = function hasGradient (options) {
-  options = options || {}
+const REGEX = /(linear-gradient|radial-gradient)\(.*\)/
 
-  return true
+module.exports = function hasGradient (property) {
+  if (typeof property !== 'string') {
+    throw new TypeError('has-gradient expected a string')
+  }
+
+  return REGEX.test(property)
 }
+
+module.exports.regex = REGEX
